@@ -1,4 +1,4 @@
-// Array de mensagens motivacionais para cada carta
+// Array de mensagens motivacionais para cada carta 
 const messages = [
   "Reserve um momento para você. Uma máscara capilar e uma pausa fazem maravilhas!",
   "Seu bem-estar importa! Passe um creme hidratante e sinta-se renovado(a).",

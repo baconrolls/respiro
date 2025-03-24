@@ -50,7 +50,7 @@ body {
 
 /* On hover, change the background color to a darker shade */
 .back-button:hover {
-  background-color:#43DDDC;
+  background:lightblue;
 }
 
 /* Keyframe animation for pulsing effect */
@@ -91,6 +91,7 @@ p {
   font:normal bold 38px 'DM Sans', Serif;
   font-weight:300;
   color: #F74039;
+  line-height:0.9;
 }
 
 /* Add this CSS code to center the "Back to Main" button */

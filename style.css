@@ -109,3 +109,31 @@ a { text-decoration:none; color:black}
   display: block;
   margin: 0 auto;
 }
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas iguais */
+  gap: 10px; /* Espaço entre as imagens */
+  justify-items: center; /* Centraliza as imagens horizontalmente */
+  margin: 0 20px;
+}
+
+.card {
+  width: 100%; /* Faz com que cada cartão ocupe 100% da largura da coluna */
+  max-width: 300px; /* Ajuste para limitar o tamanho máximo da imagem */
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do cartão */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr); /* Para telas menores, exibe 1 imagem por linha */
+  }
+}

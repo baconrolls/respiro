@@ -31,9 +31,6 @@ body {
   transform: scale(1.1); /* Zoom in the image by 10% when hovering */
 }
 
-.main-content-container iframe{
-  height:550px;
-}
 /* Apply some basic styles to the button */
 .back-button {
   background-color: #F74039;

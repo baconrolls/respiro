@@ -1,0 +1,109 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: ;
+  margin: 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  max-width: 700px; 
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.card img:hover {
+  transform: scale(1.1); /* Zoom in the image by 10% when hovering */
+}
+
+
+/* Apply some basic styles to the button */
+.back-button {
+  background-color: #33DDCF;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+/* On hover, change the background color to a darker shade */
+.back-button:hover {
+  background-color:#43DDDC;
+}
+
+/* Keyframe animation for pulsing effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulsing animation when the button is clicked */
+.back-button:active {
+  animation: pulse 0.3s;
+}
+
+h2{font-family: ;text-align:left; align-items: left; font-size: 1.5em; color:#D660BE;}
+
+div#resultContainer.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 2em; font-weight:300;
+}
+
+/* Other existing styles */
+
+#resultMessage {
+  text-align: center;
+  font-family:;
+  font-weight:300;
+  color: #D660BE;
+}
+
+/* Add this CSS code to center the "Back to Main" button */
+#resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  line-height: 1.7em;
+  font-weight:300;
+}
+a { text-decoration:none; color:black}
+
+/* Add this CSS code to center the image in the result view */
+#resultImage {
+  display: block;
+  margin: 0 auto;
+}

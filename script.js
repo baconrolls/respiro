@@ -56,77 +56,40 @@ const messages = [
 ];
 
 
+function showCard(cardNumber) {
+  const resultContainer = document.getElementById("resultContainer");
+  const resultMessage = document.getElementById("resultMessage");
 
-    // Function to shuffle the cards randomly
-    function shuffleCards() {
-      const cardsContainer = document.querySelector(".card-container");
-      const cards = Array.from(cardsContainer.children);
+  // Esconde todas as cartas
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.style.display = "none";
+    card.removeAttribute("onclick"); // Remove o evento de clique
+  });
 
-      for (let i = cards.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cards[i], cards[j]] = [cards[j], cards[i]];
-      }
+  // Mostra a carta selecionada
+  const selectedCard = document.querySelector(`.card[data-card-number="${cardNumber}"]`);
+  if (selectedCard) {
+    selectedCard.style.display = "block";
+    selectedCard.querySelector("img").style.width = "350px";  // Ajuste do tamanho da imagem
+  }
 
-      cards.forEach((card) => {
-        cardsContainer.appendChild(card);
-      });
-    }
+  // Exibe uma mensagem aleatória
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+  resultMessage.textContent = randomMessage;
+  resultContainer.style.display = "block";
+}
 
-    // Call the function to shuffle the cards after a brief delay when the page loads
-    window.addEventListener("load", () => {
-      setTimeout(shuffleCards, 1000); // Adjust the delay (in milliseconds) as needed
-    });
-
-    function showCard(cardNumber) {
-      const resultContainer = document.getElementById("resultContainer");
-      const resultMessage = document.getElementById("resultMessage");
-
-      // Hide the <h2> element in the result view
-  const resultTitle = document.getElementById("result-title");
-  resultTitle.style.display = "none";
-
-      // Hide all cards
-      const cards = document.querySelectorAll(".card");
-      cards.forEach((card) => {
-        card.style.display = "none";
-     // Remove the onclick event from the card images
-        card.removeAttribute("onclick");
-      });
-
-      // Show the selected card
-      const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
-      selectedCard.style.display = "block";
-         // Resize the selected card's image
-  const imageSize = "350px"; // Adjust the size as needed
-  selectedCard.querySelector("img").style.width = imageSize;
-  selectedCard.querySelector("img").style.height = "auto";
-        
-        const transform = "none";
-  // Remove the transform effect (zoom) by setting it to "none"
-  selectedCard.querySelector("img").style.transform = transform;
-
-      // Show a random message on the selected card
-      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-      resultMessage.textContent = randomMessage;
-
-      // Show the result container
-      resultContainer.style.display = "block";
-    }
-
-    function backToMain() {
-  // Redirect to the index page
-  window.location.href = "index.html";
-
+function backToMain() {
   const resultContainer = document.getElementById("resultContainer");
   const cards = document.querySelectorAll(".card");
 
-  // Hide the result container
-  resultContainer.style.display = "none";
+  resultContainer.style.display = "none"; // Esconde o container de resultado
 
-  // Show all cards again
+  // Mostra todas as cartas de volta
   cards.forEach((card) => {
     card.style.display = "block";
-    // Reattach the showCard function to the card images
-    card.setAttribute("onclick", "showCard(" + card.dataset.cardNumber + ")");
+    card.setAttribute("onclick", `showCard(${card.dataset.cardNumber})`);
   });
 }
+

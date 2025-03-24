@@ -37,7 +37,7 @@ body {
   color: black;
   border: 1px solid black;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
   justify-content: center;
@@ -68,7 +68,7 @@ body {
   animation: pulse 0.3s;
 }
 
-h2{font:font:normal bold 38px 'DM Sans', Serif; ;text-align:left; align-items: left; font-size: 1em; color:#F74039;;}
+h2{font:font:normal bold 38px 'DM Sans', Serif; ;text-align:left; align-items: left; font-size: 1.5em; color:#F74039;;}
 
 div#resultContainer.result-container {
   display: flex;
@@ -78,7 +78,7 @@ div#resultContainer.result-container {
 }
 
 p {
-  font-size: 1.5em; font-weight:300;line-height:0.9;
+  font-size: 1.2em; font-weight:300;line-height:0.9;
 }
 
 /* Other existing styles */

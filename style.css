@@ -4,8 +4,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: ;
+  height: 550px;
   margin: 0;
+  font:normal bold 38px 'DM Sans', Serif;
 }
 
 .card-container {
@@ -30,12 +31,12 @@ body {
   transform: scale(1.1); /* Zoom in the image by 10% when hovering */
 }
 
-iframe {
-    height: 550px;
+.main-content-container iframe{
+  height:550px;
 }
 /* Apply some basic styles to the button */
 .back-button {
-  background-color: #33DDCF;
+  background-color: #F74039;
   color: black;
   border: 1px solid black;
   padding: 10px 20px;
@@ -87,9 +88,9 @@ p {
 
 #resultMessage {
   text-align: center;
-  font-family:;
+  font:normal bold 38px 'DM Sans', Serif;
   font-weight:300;
-  color: #D660BE;
+  color: #F74039;
 }
 
 /* Add this CSS code to center the "Back to Main" button */
@@ -99,7 +100,7 @@ p {
   align-items: center;
   text-align: center;
   width: 80%;
-  line-height: 1.7em;
+  line-height: 0.9em;
   font-weight:300;
 }
 a { text-decoration:none; color:black}

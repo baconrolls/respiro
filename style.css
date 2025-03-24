@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 body {
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ body {
   animation: pulse 0.3s;
 }
 
-h2{font-family: ;text-align:left; align-items: left; font-size: 1.5em; color:#D660BE;}
+h2{font:font:normal bold 38px 'DM Sans', Serif; ;text-align:left; align-items: left; font-size: 1.5em; color:#F74039;;}
 
 div#resultContainer.result-container {
   display: flex;
